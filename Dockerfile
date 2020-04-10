@@ -33,12 +33,12 @@ RUN docker-php-ext-enable imagick
 # Installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Setting locales
-RUN echo pt_BR.UTF-8 UTF-8 > /etc/locale.gen && locale-gen
-
 # Update timezone
 RUN unlink /etc/localtime
 RUN ln -s /usr/share/zoneinfo/America/Recife /etc/localtime
+
+# Setting locales
+RUN echo pt_BR.UTF-8 UTF-8 > /etc/locale.gen && locale-gen
 
 # Changing Workdir
 WORKDIR /application
