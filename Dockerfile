@@ -5,6 +5,12 @@ LABEL maintainer="me@hugofabricio.com"
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     default-mysql-client \
+    wget \
+    fontconfig \
+    libxrender1 \
+    xfonts-75dpi \
+    xfonts-base \
+    libxml2-dev \
     libpng-dev \
     libjpeg62-turbo-dev \
     libfreetype6-dev \
