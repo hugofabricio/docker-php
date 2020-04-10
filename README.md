@@ -1,3 +1,7 @@
 # Docker PHP
 
-PHP 7.4 for Docker
+PHP ambient
+
+- PHP 7.4
+- Composer
+- WKHtmltoPDF
