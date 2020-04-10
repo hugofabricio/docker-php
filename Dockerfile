@@ -23,8 +23,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && pecl install imagick
 
 # Install wkhtmltopdf
-RUN wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb && \
-    dpkg -i wkhtmltox_0.12.5-1.bionic_amd64.deb && \
+RUN wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb && \
+    dpkg -i wkhtmltox_0.12.5-1.stretch_amd64.deb && \
     apt-get install -f && \
     ln -s /usr/local/bin/wkhtmltopdf /usr/bin && \
     ln -s /usr/local/bin/wkhtmltoimage /usr/bin
