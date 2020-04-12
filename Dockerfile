@@ -20,8 +20,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     locales \
     zip \
     jpegoptim optipng pngquant gifsicle \
-    php7.4-gd \
     && pecl install imagick
+
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 
 # Install wkhtmltopdf
 RUN wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb && \
