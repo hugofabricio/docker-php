@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     locales \
     zip \
     jpegoptim optipng pngquant gifsicle \
+    php7.4-gd \
     && pecl install imagick
 
 # Install wkhtmltopdf
